@@ -20,6 +20,14 @@ public: double areaOfSquare(double d)
 
         return area;
     }
+
+public: double areaOfRectangle(double a, double b)
+    {
+        /* Area of a Rectangle given length and width */
+        double area = a * b;
+
+        return area;
+    }
 };
 
 
@@ -38,9 +46,15 @@ int main()
     double diagonal;
     cin >> diagonal;
 
+    /* Prompt and read the diagonal of the square from the user */
+    cout << "Type in the length and width of the Rectangle separated by space with the enter key";
+    double length, width;
+    cin >> length >> width;
+
     /* Print the values of the triangle and shape area */
     cout << "Area of Triangle is: " << sa.areaOfTriangle(side1, side2, side3) << endl;
     cout << "Area of Square is: " << sa.areaOfSquare(diagonal) << endl;
+    cout << "Area of Rectangle is: " << sa.areaOfRectangle(length, width) << endl;
 
     return 0;
 }
